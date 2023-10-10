@@ -1,4 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withBuilderDevTools = require("@builder.io/dev-tools/next")();
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = withBuilderDevTools({});
+console.log("nextConfig: " + JSON.stringify(nextConfig));
+
+module.exports = nextConfig;
